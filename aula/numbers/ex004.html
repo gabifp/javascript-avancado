@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brincando com números</title>
+</head>
+<body>
+    <script>
+        let seuNumero = prompt('Digite um número:');
+        seuNumero = Number(seuNumero)
+        document.body.innerHTML = `<h1>Seu número é ${seuNumero} <br /></h1>`
+        document.body.innerHTML += `Raiz quadrada <strong>${seuNumero ** (1/2)}</strong><br />` // poderia fazer ${Math.sqrt(seuNumero)}
+        document.body.innerHTML += `${seuNumero} é inteiro? <strong>${Number.isInteger(seuNumero)}</strong> <br />`
+        document.body.innerHTML += `É NaN? <strong>${Number.isNaN(seuNumero)}</strong> <br />`
+        document.body.innerHTML += `Arredondando para baixo: <strong>${Math.floor(seuNumero)}</strong> <br />`
+        document.body.innerHTML += `Arredondando para cima: <strong>${Math.ceil(seuNumero)}</strong> <br />`
+        document.body.innerHTML += `Com duas casas decimais: <strong>${seuNumero.toFixed(2)}</strong> <br />`
+    </script>
+</body>
+</html>

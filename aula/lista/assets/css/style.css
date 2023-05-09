@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300;8..144,500;8..144,600;8..144,700&display=swap');
+
+:root {
+  --primary-color: #eee;
+  --primary-color-regular: #51626e;
+  --primary-color-dark: #606060;
+  --primary-color-darker: #353535;
+  --secondary-color-darker: #d24d57;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+	font-family: Roboto, sans-serif;
+  font-weight: 300;
+	background: var(--primary-color-darker);
+	color: #FFF;
+}
+
+.container {
+  padding: 0;
+  margin: 0;
+}
+
+/* Style the header */
+
+header {
+  margin-top: 30px;
+  padding: 15px;
+  width: 100%;
+  height: 20%;
+  text-align: center; 
+  background-image: linear-gradient(60deg, var(--primary-color) 60%, 
+    var(--primary-color-darker) 40%);
+  border-bottom: 5px solid var(--primary-color);
+}
+
+header > h1 {
+  font-size: 100px;
+  text-align: center;
+  color: var(--primary-color-darker);
+}
+
+h1 > span {
+    background-image: linear-gradient(60deg, var(--primary-color-darker) 25%, 
+      var(--primary-color-dark) 26%, var(--primary-color) 40%);
+  
+    /* Segundo passo: apagar do fundo tudo que não estiver imediatamente atrás de texto */
+    background-clip: text;
+    -webkit-background-clip: text; /* Alguns navegadores precisam do prefixo */
+  
+    /* Terceiro passo: apagar o texto, deixando apenas o fundo atrás dele */
+    -webkit-text-fill-color: transparent;
+  
+    color: var(--secondary-color-darker);
+}
+
+header > h3 {
+  font-variant: small-caps;
+  font-size: 14px;
+  padding: 10px;
+  color: var(--secondary-color-darker);
+}
+
+/* Style the input */
+
+.inputsEBtn {
+  background: transparent;
+  padding: 30px 40px;
+  margin: 0;
+  color: white;
+  text-align: center;
+}
+
+.input-tarefa {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 85%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+/* Style the "Add" button */
+
+a.animated-button {
+  margin: -32px auto 0!;
+}
+
+a.animated-button:link {
+  margin: -32px auto 0;
+}
+
+a.animated-button:link, a.animated-button:visited {
+  margin: -32px auto 0;
+}
+
+.btn-tarefa:hover {
+
+}
+
+
+/* Remove margins and padding from the list */
+ul {
+  box-sizing: border-box;
+  color: var(--primary-color-darker);
+  width: 100%;
+  padding: 0;
+}
+
+/* Style the list items */
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 6px 4px 6px 20px;
+  background: #eee;
+  font-size: 14px;
+  transition: 0.2s;
+
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+/* Darker background-color on hover */
+ul li:hover {
+  background: #ddd;
+}
+
+/* When clicked on, add a background color and strike out text */
+ul li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+ 
+}
+

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Herança</title>
+</head>
+<body>
+  <h1>Herança</h1>
+  <section>
+    <p>Primeiros passos para entender Herança</p>
+    <p>Consulte o console!</p>
+
+
+    <h2>Fórmula para validar um CPF</h2>
+    
+    <p>CPF = 705.484.450-52 </p>
+    <!--ou 070.987.720-03-->
+
+    <strong>Primeira etapa, multiplicar todos os números (exceto os dígitos) por uma sequência regressiva... </strong>
+    <p>7x 0x 5x 4x 8x 4x 4x 5x 0x</p>
+    <p>10 9  8  7  6  5  4  3  2</p>
+    <p>= 70 0  40 35 48 20 20 15 0 => 237</p> 
+
+    <strong>A partir disso pegamos o resultado da conta acima e aplicamos a fórmula de validação do primeiro dígito:</strong>
+
+    <p>11 - (237 % 11) = 5 <strong>(Primeiro dígito)</strong></p>
+    <p>Obs: Se o resultado for maior que 9, consideramos o digito como 0.</p>
+
+    <strong>Voltamos com a conta para pegar o segundo dígito, agora considerando na conta o primeiro dígito adquirido...</strong>
+    <p>7x 0x 5x 4x 8x 4x 4x 5x 0x 5x</p>
+    <p>11 10 9  8  7  6  5  4  3  2</p>
+    <p>= 77 0  45 32 56 24 24 20 0 10 => 284</p>
+
+    <strong>Segundo dígito:</strong>
+    <p>11 - (284 % 11) = 2</p>
+  </section>
+
+  <script src="heranca.js"></script>
+</body>
+</html>
