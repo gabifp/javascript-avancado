@@ -43,10 +43,10 @@ class ValidadorCPF {
   }
 }
 
-const validadorCPF = new ValidadorCPF('409.424.758-01');
+/* const validadorCPF = new ValidadorCPF('409.424.758-01');
 
 if (validadorCPF.valida()) {
   console.log('Cpf válido');
 } else {
   console.log('Cpf inválido');
-}
+} */
