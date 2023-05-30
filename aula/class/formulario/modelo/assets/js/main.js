@@ -1,4 +1,3 @@
-const { resourceUsage } = require("process");
 class ValidaFormulario {
   constructor() {
     this.formulario = document.querySelector('.formulario');
@@ -51,13 +50,17 @@ class ValidaFormulario {
   camposSaoValidos() {
     let valid = true;
 
+    for (let errorText of this.formulario.querySelectorAll('.error-text')) {
+      errorText.remove();
+    }
+
     for (let campo of this.formulario.querySelectorAll('.validar')) {
       /* O previousElementSibling captura o elemento anterior ao que está sendo validado, e o innerText pega o texto contigo nesse elemento.
       Isso porque, eu estou validando um input, mas o nome referência desse input (label) é o elemento anterior */
       const label = campo.previousElementSibling.innerText;
 
       if (!campo.value) {
-        this.criaErro(campo, 'Campo "${label}" não pode estar em branco.');
+        this.criaErro(campo, `Campo ${label} não pode estar em branco.`);
         valid = false;
       }
 
@@ -91,7 +94,7 @@ class ValidaFormulario {
   }
 
   validaCPF(campo) {
-    const cpf = new ValidaCPF(campo.value);
+    const cpf = new ValidadorCPF(campo.value);
 
     if(!cpf.valida()) {
       this.criaErro(campo, 'CPF inválido.');
