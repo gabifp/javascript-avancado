@@ -6,43 +6,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="assets/css/paginas.css">
-  <title>Modelo</title>
+  <title>Uso de Ajax e XHR</title>
 </head>
 
-<body>
+<body class="body-interno">
+  <div class="row btn">
+    <button onclick="back()" class="btn-voltar">VOLTAR</button>
+  </div>
+  <hr>
   <div class="row">
-    <h1>Uso de Ajax e XHR</h1>
-    <p>
+    <h1 class="title">Uso de Ajax e XHR</h1>
+    <p class="description">
       O Ajax e o XHR são amplamente utilizados no desenvolvimento web para criar aplicações interativas e dinâmicas.
     </p>
   </div>
   <div class="row">
-    <h2>Algumas das principais áreas de aplicação</h2>
-    <ul>
-      <li>
-        <h3>Atualizações assíncronas de conteúdo</h3>
+    <h2 class="subtitle-1">Algumas das principais áreas de aplicação</h2>
+    <ul class="list">
+      <li class="item">
+        <h3 class="subtitle-2">Atualizações assíncronas de conteúdo</h3>
         <p>
           Com o Ajax, é possível atualizar partes específicas de uma página sem recarregar todo o conteúdo.
           Isso é especialmente útil em aplicações que exigem atualizações em tempo real, como feeds de notícias, sistemas de bate-papo e painéis de controle.
-        </p>
+        </p class="info">
       </li>
-      <li>
-        <h3>Validação de formulários</h3> 
-        <p>
+      <li class="item">
+        <h3 class="subtitle-2">Validação de formulários</h3> 
+        <p class="info">
           O Ajax pode ser usado para validar dados de formulários no lado do cliente antes de enviá-los para o servidor.<br>
           Isso permite fornecer feedback instantâneo aos usuários sobre erros ou campos obrigatórios.
         </p>
       </li>
-      <li>
-        <h3>Carregamento de dados sob demanda</h3> 
-        <p>
+      <li class="item">
+        <h3 class="subtitle-2">Carregamento de dados sob demanda</h3> 
+        <p class="info">
           Com o Ajax, é possível carregar dados do servidor conforme necessário, em vez de carregar todos os dados de uma só vez.
           Isso é útil em cenários em que o conjunto completo de dados é grande e pode levar muito tempo para ser carregado.
         </p>
       </li>
-      <li>
-        <h3>Integração com APIs</h3> 
-        <p>
+      <li class="item">
+        <h3 class="subtitle-2">Integração com APIs</h3> 
+        <p class="info">
           O Ajax é comumente usado para interagir com APIs de serviços web, como serviços de mídia social, serviços de pagamento e serviços de geolocalização. <br>
           Isso permite que os aplicativos web aproveitem as funcionalidades fornecidas por essas APIs para oferecer recursos adicionais aos usuários.
         </p>

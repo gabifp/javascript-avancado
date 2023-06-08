@@ -6,35 +6,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="assets/css/paginas.css">
-  <title>Modelo</title>
+  <title>XML HTTP Request (XHR)</title>
 </head>
 
-<body>
+<body class="body-interno">
+  <div class="row btn">
+    <button onclick="back()" class="btn-voltar">VOLTAR</button>
+  </div>
+  <hr>
   <div class="row">
-    <h1>XML HTTP Request (XHR)</h1>
-    <p>
+    <h1 class="title">XML HTTP Request (XHR)</h1>
+    <p class="description">
       XML HTTP Request (XHR) é um objeto JavaScript que permite o envio e a
       recepção de dados de um servidor web usando o protocolo HTTP ou HTTPS.
       <mark>O XHR é o principal componente por trás da abordagem Ajax</mark>.
     </p>
   </div>
   <div>
-    <h2> Principais características do XHR</h2>
-    <ul>
-      <li>
-        <h3>Criação do objeto</h3> 
-        <p>Para utilizar o XHR, é necessário criar uma instância do objeto XMLHttpRequest através do construtor "new XMLHttpRequest()".</p>
+    <h2 class="subtitle-1"> Principais características do XHR</h2>
+    <ul class="list">
+      <li class="item">
+        <h3 class="subtitle-2">Criação do objeto</h3> 
+        <p class="info">Para utilizar o XHR, é necessário criar uma instância do objeto XMLHttpRequest através do construtor "new XMLHttpRequest()".</p>
       </li>
-      <li>
-        <h3>Enviar solicitações</h3> 
-        <p>
+      <li class="item">
+        <h3 class="subtitle-2">Enviar solicitações</h3> 
+        <p class="info">
           Após a criação do objeto XHR, é possível usar os métodos fornecidos por ele para enviar solicitações para o servidor. O método mais comum é o "open()",
           que configura a solicitação com o método HTTP desejado e o URL do servidor, e o método "send()", que envia a solicitação para o servidor.
         </p>
       </li>
-      <li>
-        <h3>Manipulação de respostas</h3> 
-        <p>
+      <li class="item">
+        <h3 class="subtitle-2">Manipulação de respostas</h3> 
+        <p class="info">
           O objeto XHR permite definir funções de callback para lidar com a resposta do servidor.
           É possível especificar uma função para ser executada quando a resposta estiver pronta, bem como funções para lidar com erros e progresso da solicitação.
         </p>
